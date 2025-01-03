@@ -62,20 +62,17 @@ export class LoginController {
         );
         
         console.log({
-          domain: 'localhost',
           httpOnly: true,
           secure: enviroment === 'production' ,
           maxAge: MAXAGE_REFRESH_TOKEN * 1, 
           sameSite : this.cookieSameSite,
         })
         res.cookie('access_token', access_token,{
-          domain: 'localhost',
           httpOnly : true,
           secure: enviroment === 'production' , // la cookie requiere https
           sameSite : this.cookieSameSite, // strict : la cookie solo se puede acceder en el mismo dominio, None : de cualquiera
           maxAge: MAXAGE_ACCESS_TOKEN 
         }).cookie('refresh_token', refresh_token, {
-          domain: 'localhost',
           httpOnly: true,
           secure: enviroment === 'production' ,
           maxAge: MAXAGE_REFRESH_TOKEN * 1, 
