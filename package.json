@@ -18,7 +18,7 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:local": "node --watch --env-file .env server-with-local.js ",
+    "start:local": "node server-with-local.js ",
     "start:mysql": "node --watch --env-file .env server-with-mysql.js"
   },
   "type": "module",
