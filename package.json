@@ -1,0 +1,31 @@
+{
+  "name": "jack",
+  "version": "1.0.0",
+  "author": "",
+  "main": "app.js",
+  "dependencies": {
+    "cookie-parser": "1.4.7",
+    "cors": "2.8.5",
+    "express": "4.21.0",
+    "jsonwebtoken": "9.0.2",
+    "morgan": "1.10.0",
+    "path": "0.12.7",
+    "socket.io": "4.7.5",
+    "zod": "3.24.1"
+  },
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:local": "node --watch --env-file .env server-with-local.js ",
+    "start:mysql": "node --watch --env-file .env server-with-mysql.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}

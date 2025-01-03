@@ -1,0 +1,12 @@
+
+### CREAR USUARIO
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+    "nick":"prueba",
+    "tokenTurnstile" : "as"
+}
+
+### INGRESAR AL CHAT
+GET  http://localhost:8080/api/chat

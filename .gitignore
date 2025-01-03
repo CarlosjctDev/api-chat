@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Entorno de variables
+.env
+
+# Archivos del sistema
+Thumbs.db
+.DS_Store
