@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { ChatController } from '../controllers/chat/controller.chat.js'
-
+const serverAddress = process.env.SERVER_ADDRESS;
 
 export const createChatRouter = ({chatModel,configEnv,app,jwt,io}) =>{
     const chatRouter = Router();
@@ -12,7 +12,7 @@ export const createChatRouter = ({chatModel,configEnv,app,jwt,io}) =>{
     chatRouter.post('/', async (req, res) => {
         try {
             // URL del servidor HTTP
-            const externalUrl = 'http://190.131.206.250:8085/ItSolution/Fase3?opc=usuario&opc_sql=u_siau_pqr_fechas_min_max&c_user=1&empresas_disponibles=1,2,4,5,10,12';
+            const externalUrl = `http://${serverAddress}/ItSolution/Fase3?opc=usuario&opc_sql=u_siau_pqr_fechas_min_max&c_user=1&empresas_disponibles=1,2,4,5,10,12`;
             console.log("EXTERNAL DATA");
             // Configuración de la solicitud
             const response = await fetch(externalUrl, {
