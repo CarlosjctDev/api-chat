@@ -1,5 +1,4 @@
 import { Router } from 'express'
-import fetch from 'node-fetch';
 import { ChatController } from '../controllers/chat/controller.chat.js'
 
 
